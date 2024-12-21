@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: bisque;
+}
+body {
+  overflow-x: hidden;
+}
+/*.icon1 {
+  display: none;
+}*/
+
+#container {
+  position: relative;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  width: 80%;
+  border: 2px solid #523f38;
+  background-color: #fc8d7c;
+  border-radius: 5px;
+  margin: 80px auto;
+}
+
+/*.card:hover {
+  animation: pulse 2s infinite ease-in-out alternate;
+}
+@keyframes pulse {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}*/
+h1 {
+  text-align: center;
+}
+.text {
+  padding: 10px;
+  text-align: center;
+  background-color: #fc8d7c;
+  color: #523f38;
+  font-size: xx-large;
+}
+#container2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 80px;
+}
+#newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  border: 2px solid#523f38;
+  padding: 15px;
+  background-color: #fc8d7c;
+  border-radius: 5px;
+  color: #523f38;
+}
+label {
+  background-color: #fc8d7c;
+  color: #523f38;
+}
+.carrousel {
+  position: relative;
+  width: 80vw;
+  height: 300px;
+  margin-top: 25vh;
+  margin-bottom: 100vh;
+}
+.carrousel-img {
+  width: 80%;
+}
+.carrousel > .carrousel-img {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 250px);
+  opacity: 0;
+  animation: display 10s infinite;
+}
+
+.carrousel-img:nth-child(2) {
+  animation-delay: 2s;
+}
+.carrousel-img:nth-child(3) {
+  animation-delay: 4s;
+}
+.carrousel-img:nth-child(4) {
+  animation-delay: 6s;
+}
+.carrousel-img:nth-child(5) {
+  animation-delay: 8s;
+}
+@keyframes display {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+.animation {
+  animation-timeline: view(
+    block 50% 10%
+  ); /* block est une manière de dire "quand on scroll verticalement" ; 50% signifie "quand l'image atteint la moitié de l'écran, en partant de la haut" ; 10% signifie "quand l'image apparait à 10% du bas de l'écran" */
+  animation-name: fade-in;
+  animation-fill-mode: both;
+  animation-duration: 1ms;
+  animation-timing-function: linear;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .card {
+    margin: 15px;
+    width: 70%;
+    position: static;
+    margin-top: 150px;
+    margin-left: 70px;
+  }
+  #container {
+    margin: 0;
+  }
+  .animation {
+    animation: none;
+  }
+  .text {
+    font-size: 20px;
+  }
+  .carrousel {
+    width: 550px;
+    height: 250px;
+    margin-bottom: 0px;
+  }
+}

@@ -1,0 +1,277 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: bisque;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+}
+.logo1 {
+  display: block;
+  flex-direction: row;
+  position: absolute;
+  background-color: #1ea896;
+  margin-top: -50px;
+  margin-left: 50px;
+}
+nav {
+  display: block;
+  flex-direction: row;
+  background-color: #1ea896;
+  height: 150px;
+  width: 100vw;
+  align-content: center;
+  text-align: end;
+}
+#nav-mobile {
+  display: none;
+}
+.linknav {
+  color: antiquewhite;
+  text-decoration: none;
+  background-color: #1ea896;
+  font-size: xx-large;
+  font-weight: bold;
+  margin: 15px;
+  padding: 30px;
+  border-radius: 5px;
+  border: 2px solid antiquewhite;
+}
+.linknav:hover {
+  background-color: antiquewhite;
+  color: black;
+}
+#button {
+  background-color: #fc8d7c;
+  padding: 5px;
+}
+button {
+  background-color: antiquewhite;
+  border-radius: 3px;
+  margin: 5px;
+  padding: 7px;
+  font-weight: bold;
+}
+button:hover {
+  background-color: #1ea896;
+  color: antiquewhite;
+  cursor: pointer;
+}
+footer .footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  background-color: #4c5454;
+  color: antiquewhite;
+  font-style: italic;
+  padding: 7px;
+  margin-top: 50px;
+  width: 100%;
+}
+span,
+.a1 {
+  background-color: #4c5454;
+  padding: 10px;
+}
+.a1 {
+  color: antiquewhite;
+  text-decoration: none;
+  background-color: #4c5454;
+  font-size: large;
+  font-weight: bold;
+  margin: 15px;
+  border-radius: 5px;
+  border: 2px solid antiquewhite;
+}
+.a1:hover {
+  background-color: antiquewhite;
+  color: black;
+  padding: 10px;
+}
+/*.carrousel {
+  position: relative;
+  width: 100vw;
+  height: 300px;
+  margin-top: 15vh;
+}
+
+.carrousel > .carrousel-img {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 250px);
+  opacity: 0;
+  animation: display 10s infinite;
+}
+
+.carrousel-img:nth-child(2) {
+  animation-delay: 2s;
+}
+.carrousel-img:nth-child(3) {
+  animation-delay: 4s;
+}
+.carrousel-img:nth-child(4) {
+  animation-delay: 6s;
+}
+.carrousel-img:nth-child(5) {
+  animation-delay: 8s;
+}*/
+#container1 {
+  /*width: 100px; /* rappel : largeur de 100 pixels */
+  /*margin: 100px auto; /* rappel : marge automatique sur les côtés pour centrer le contenu */
+  /*padding: 20px; /* rappel : espacement intérieur de 20 pixels */
+  margin-top: 70px;
+  text-align: center; /* rappel : centrage du texte */
+  background-color: #4c5454;
+}
+#contact {
+  font-size: 50px;
+}
+/* style du bouton */
+.button {
+  padding: 10px 15px;
+  border: 1px solid #aaa;
+  border-radius: 2px; /* coins très légèrement arrondis */
+  background-color: #1ea896;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15); /* ombre légère du cadre */
+  color: bisque;
+  text-decoration: none; /* on retire le soulignement par défaut du texte du lien */
+  text-shadow: 0 1px 0 #625f5f; /* ombre du texte */
+  cursor: pointer; /* nouveau : on peut changer manuellement l'apparence du curseur ; ici de type pointeur lors d'un hover */
+  transition: all 0.2s ease-out; /* va permettre d'effectuer les transitions (faire apparaitre, faire disparaitre la modale) de façon fluide et rapide */
+}
+
+/* style de l'overlay (effet de superposition de fenêtres) */
+.overlay {
+  position: absolute; /* position absolue pour couvrir toute la fenêtre */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5); /* fond noir et semi-transparent */
+  transition: opacity 200ms; /* effet de transition sur l'opacité, comme indiqué plus haut avec "transition" */
+  visibility: hidden; /* rend l'overlay invisible par défaut */
+  opacity: 0; /* opacité initiale à 0 */
+}
+
+/* style de l'overlay lorsque l'ID est ciblé (lien cliqué) */
+.overlay:target {
+  visibility: visible; /* rend l'overlay visible */
+  opacity: 1; /* opacité maximale */
+}
+
+/* style de la modale */
+.modal {
+  width: 500px;
+  margin: 75px auto;
+  padding: 50px;
+  text-align: center;
+  background: bisque;
+  border: 1px solid #666;
+  border-radius: 8px;
+  opacity: 85%;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  position: relative; /* position relative à la position de départ de la div contenant cette classe */
+}
+
+.modal h2 {
+  margin-top: 0;
+  text-align: center;
+  color: #666;
+  background-color: bisque;
+  font-size: 60px;
+}
+
+/* style du bouton de fermeture du modal */
+.modal .close {
+  position: absolute; /* position absolue par rapport au modal */
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  right: 20px;
+  opacity: 0.8;
+  transition: all 200ms;
+  font-size: 24px;
+  text-decoration: none;
+  color: #666;
+  background-color: bisque;
+}
+
+.modal .content {
+  max-height: 400px; /* hauteur maximale de 400 pixels */
+  overflow: auto; /* activation du défilement si le contenu dépasse la hauteur maximale (avec un lorem ipsum bien cahrgé par exemple) */
+  background-color: bisque;
+}
+
+/*.button1:popover-open {
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  inset: unset;
+  bottom: 5px;
+  right: 5px;
+  margin: 0;
+}
+[popover] {
+  position: fixed;
+  inset: 0;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  border: 5px solid #1ea896;
+  border-radius: 5px;
+  padding: 50px;
+  overflow: auto;
+  color: #523f38;
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 80%;
+}*/
+.a2 {
+  background-color: bisque;
+}
+.logo {
+  padding: 10px;
+  background-color: bisque;
+}
+.logo:hover {
+  width: 60px;
+}
+.mail {
+  background-color: bisque;
+  color: #4c5454;
+  padding: 10px;
+}
+@media only screen and (max-width: 480px) {
+  #nav-desktop {
+    display: none;
+  }
+  #nav-mobile {
+    display: block;
+  }
+  .logo1 {
+    margin: 0;
+    top: 10px;
+  }
+  #contact {
+    font-size: 20px;
+  }
+  .linknav {
+    font-size: 2px;
+    padding: 10px;
+  }
+  .modal {
+    width: 350px;
+  }
+  h2 {
+    font-size: 5px;
+  }
+}

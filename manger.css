@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: bisque;
+}
+body {
+  overflow-x: hidden;
+}
+area {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.area1:hover {
+  .card1 {
+    display: flex;
+    position: absolute;
+  }
+}
+img {
+  margin-top: 60px;
+  margin-left: 5px;
+}
+.card1,
+.card2 {
+  position: relative;
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 550px;
+  border: 2px solid #523f38;
+  background-color: #fc8d7c;
+  border-radius: 5px;
+  padding: 20px;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+  background-color: #fc8d7c;
+  color: #523f38;
+  font-size: large;
+}
+
+/*nav {
+  display: block;
+  flex-direction: row;
+  background-color: #1ea896;
+  height: 70px;
+  width: 100vw;
+  align-content: center;
+  text-align: end;
+}
+.linknav {
+  color: antiquewhite;
+  text-decoration: none;
+  background-color: #1ea896;
+  font-size: large;
+  font-weight: bold;
+  margin: 15px;
+  padding: 7px;
+  border-radius: 5px;
+  border: 2px solid antiquewhite;
+}
+.linknav:hover {
+  background-color: antiquewhite;
+  color: black;
+}
+#button {
+  background-color: #fc8d7c;
+  padding: 5px;
+}
+button {
+  background-color: antiquewhite;
+  border-radius: 3px;
+  margin: 5px;
+  padding: 7px;
+  font-weight: bold;
+}
+button:hover {
+  background-color: #1ea896;
+  color: antiquewhite;
+  cursor: pointer;
+}
+footer .footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  background-color: #4c5454;
+  color: antiquewhite;
+  font-style: italic;
+  padding: 7px;
+  margin-top: 25px;
+  width: 100%;
+}
+span,
+.a1 {
+  background-color: #4c5454;
+  padding: 10px;
+}
+.a1 {
+  color: antiquewhite;
+  text-decoration: none;
+  background-color: #4c5454;
+  font-size: large;
+  font-weight: bold;
+  margin: 15px;
+  padding: 7px;
+  border-radius: 5px;
+  border: 2px solid antiquewhite;
+}
+.a1:hover {
+  background-color: antiquewhite;
+  color: black;
+}*/
